@@ -4,15 +4,16 @@ import os
 
 relative_path_data = "/sample_data/trade_activity.csv"
 data_frame = pd.read_csv(os.getcwd() + relative_path_data, delimiter=",")
-data_frame["Net Position"] = data_frame["Qty"] * data_frame["Price"]
+data_frame["Net Position"] = data_frame["Qty"] * data_frame["Net Price"]
 
 open_trades = {}
 complete_trades = []
 
 for index, row in data_frame.iterrows():
     ticker = row["Symbol"]
+    trade_type = row["Spread"]
     net_size = row["Qty"]
-    net_position = row["Net Position"]
+    net_position = row["Net Position"] if trade_type == "STOCK" else row["Net Position"]*100
     if ticker in open_trades:
         open_trades[ticker]["net_size"] += net_size
         open_trades[ticker]["net_position"] += net_position
