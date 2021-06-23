@@ -23,19 +23,20 @@ As there are many ways to provide statical measures on such data such as average
 
 ### ii.How to
 
+- Setup Enviornment `python3 -m venv virtual_environment`
 - Activate Environment `source virtual_environment/bin/activate `
 - Install Packages | Dependencies `pip install -r requirements.txt `
 
 ---
 
-### IV. Contributions
+### ii. Contributions
 
 |   Student Name   | GitHub Username |
 | :--------------: | :-------------: |
 |   Aaron Singh    |   singhaaron    |
 | Andrei Georgescu |     Doxify      |
 
-### V.Dev Change Log
+### IV.Dev Change Log
 
 #### Wenesday, June 23, 2021
 
