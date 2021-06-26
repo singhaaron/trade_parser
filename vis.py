@@ -4,13 +4,13 @@ import numpy as np
 
 
 # global plot config
-plt.style.use("dark_background")
+# plt.style.use("dark_background")
 
 
 def scatter_plot(x: np.array, y: np.array):
     plt.title("Scatter Plot")
     plt.grid(axis="x")
-    plt.scatter(x, y, color="pink")
+    plt.scatter(x, y, color="black")
     plt.xlabel("profit_loss")
     plt.ylabel("capital_size")
     plt.show()
