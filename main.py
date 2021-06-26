@@ -32,8 +32,8 @@ vis.linear_regression(
 )
 
 # Plot Individual Column w/trade number(index)
-vis.plot_line(df_all=analzyed_csv, y="cap", c="yellow")
-vis.plot_line(df_all=analzyed_csv, y="p&l", c="green")
+vis.plot_line(df_all=analzyed_csv, y="cap", c="black")
+vis.plot_line(df_all=analzyed_csv, y="p&l", c="black")
 
 # Plot all Grids
 vis.vis_on(set=True)
