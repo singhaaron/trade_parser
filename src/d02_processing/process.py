@@ -1,6 +1,7 @@
 # process.py
-import pandas as pd
 import datetime
+import os
+import pandas as pd
 
 
 def time_elapsed(start: datetime, end: datetime) -> int:
@@ -16,7 +17,7 @@ def time_elapsed(start: datetime, end: datetime) -> int:
     return end[-1].minute * 60 + end[-1].second - start[0].minute * 60 + start[0].second
 
 
-def analyze(df: pd.DataFrame) -> pd.DataFrame:
+def analyze(csv_path: str):
     """
     summary:
         return data frame w/condensed information and usable as a reflection of meaningful data
@@ -25,19 +26,22 @@ def analyze(df: pd.DataFrame) -> pd.DataFrame:
     returns:
         pd.DataFrame: dataframe with informated analyzed
     """
+
+    df = pd.read_csv(os.getcwd() + csv_path, delimiter=",")
     open_trades = {}
     complete_trades = []
     target_columns = [
         "ticker",
-        "p&l",
+        "profit_loss",
         "cap",
         "time_duration",
         "positions",
-        "entry pos",
-        "exit pos",
+        "entry_pos",
+        "exit_pos",
         "entrys",
         "exits",
     ]
+    df["Exec Time"] = pd.to_datetime(df["Exec Time"])
     for index, row in df.iterrows():
         ticker = row["Symbol"]
         net_size = int(row["Qty"])
@@ -63,7 +67,10 @@ def analyze(df: pd.DataFrame) -> pd.DataFrame:
                         ticker,
                         -(round(open_trades[ticker]["net_position"], 2)),
                         round(open_trades[ticker]["net_cap"], 2),
-                        time_elapsed(entrys, exits),
+                        time_elapsed(entrys, exits)
+                        if time_elapsed(entrys, exits) > 0
+                        and time_elapsed(entrys, exits) < 1800
+                        else 0,
                         len(entrys) + len(exits),
                         len(entrys),
                         len(exits),
@@ -79,4 +86,13 @@ def analyze(df: pd.DataFrame) -> pd.DataFrame:
                 "net_cap": net_cap,
                 "executions": {"entrys": entrys, "exits": exits},
             }
-    return pd.DataFrame(complete_trades, columns=target_columns)
+
+    # turn list into dataframe
+    df_churn = pd.DataFrame(
+        data=complete_trades, index=range(len(complete_trades)), columns=target_columns
+    )
+
+    df_churn.to_csv(
+        os.getcwd() + "/data/03_processed/01_df_trade_processed.csv",
+        header=True,
+    )
