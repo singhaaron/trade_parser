@@ -17,7 +17,7 @@ Project dedicated to mimicking [Tradervue](https://www.tradervue.com/), a tradin
 
 Methods involved:
 
-- Inferential Statistics
+- Descriptive | Inferential Statistics
 - Data Visualization
 - Machine Learning
 - Predictive Modeling
@@ -83,7 +83,7 @@ Methods involved:
 
 - [x] Idea
 - [x] Preprocessing Data
-- [ ] Inferential Statistics
+- [ ] Descriptive | Inferential Statistic Report
 - [ ] Machine Learning (Training Model w/ Tensorflow & Scartch_Neural_Net)
 - [ ] Predictive Modeling(Trained Model)
 - [ ] Data Visualization
@@ -97,6 +97,10 @@ Methods involved:
 | Andrei Georgescu |     Doxify      |
 
 ### VI.Dev Change Log
+
+#### Thursday, July 1, 2021
+
+- intial data exploration details preprocessed data before modeling
 
 #### Wenesday, June 30, 2021
 
