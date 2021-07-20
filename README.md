@@ -12,6 +12,8 @@
 
 Project dedicated to mimicking [Tradervue](https://www.tradervue.com/), a trading journal to provide insights on trading activity but with more of a bang.
 
+Project Presentation UI: https://singhaaron.github.io/neural_tradeazy/
+
 ---
 ### ii. Work In Progress
 
