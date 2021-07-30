@@ -21,11 +21,12 @@ Project Presentation UI: https://singhaaron.github.io/neural_tradeazy/
 - [x] Preprocessing Dataset
 - [x] Data Visualization
 - [ ] Training | Testing Models
-    - [x] Linear Regression
-    - [ ] Logistic Regression
+    - [x] Multi-Variant Linear Regression
+    - [x] Logistic Regression
+    - [x] Decision Tree Classifier
     - [ ] Support Vector Machines (SVM)
     - [ ] Recurrent Neural Network (LSTM)
-- [ ] UI for Presentation | Report
+- [x] UI for Presentation | Report
 
 ---
 ### iii.Installation
@@ -103,6 +104,10 @@ Project Presentation UI: https://singhaaron.github.io/neural_tradeazy/
 | Andrei Georgescu |     Doxify      |
 
 ### VI.Dev Change Log
+#### Thursday, July 29, 2021
+
+- models (logistic regression | decision tree classifier)
+- ui for current progress
 #### Monday, July 19, 2021
 
 - models (multivariant linear regression)

@@ -1,6 +1,5 @@
 import numpy as np
 
-
 # 1 dependent | independent variable
 def gradient_descent(x, y):
     m_curr, b_curr = 0, 0
