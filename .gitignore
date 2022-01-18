@@ -1,10 +1,7 @@
 # Virtual Enviornment
 \virtual_environment
-
 # IDE
 .vscode
-
-
 #pycache
 __pycache__
 # misc
@@ -13,3 +10,5 @@ __pycache__
 .env.development.local
 .env.test.local
 .env.production.local
+# local trade parsed csv
+tmp.csv

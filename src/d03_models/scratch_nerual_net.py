@@ -2,11 +2,6 @@ import sys
 import numpy as np
 import matplotlib
 
-print("Python", sys.version)
-print("Numpy", np.__version__)
-print("Matplotlib", matplotlib.__version__)
-
-
 # inputs = [1, 2, 3]
 # weights = [0.2, 0.8, -0.5]
 # bias = 2

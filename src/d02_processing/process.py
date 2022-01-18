@@ -10,7 +10,7 @@ import re
 import pandas as pd
 import numpy as np
 
-balance = 2670
+balance = 3740
 
 def time_elapsed(start: datetime, end: datetime) -> int:
     """
@@ -193,9 +193,9 @@ def group_trades(csv_path: str):
                         open_trades[ticker]["executions"]["exits"][0].day_of_week,
                         open_trades[ticker]["executions"]["exits"][0].strftime("%V"),
                         open_trades[ticker]["executions"]["exits"][0].date(),
-                        volume,
-                        entrys[0].time(),
-                        exits[-1].time()
+                        volume, # number of shares
+                        entrys[0].time(), # entry first time
+                        exits[-1].time() # exit last time
                     ]
                 )
                 del open_trades[ticker]

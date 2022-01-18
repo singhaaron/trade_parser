@@ -1,4 +1,4 @@
-# neural tradeazy
+# trade parser
 
 1.  Description
 2.  Work In Progress
@@ -20,12 +20,10 @@ Project Presentation UI: https://singhaaron.github.io/neural_tradeazy/
 - [x] Idea
 - [x] Preprocessing Dataset
 - [x] Data Visualization
-- [ ] Training | Testing Models
+- [x] Training | Testing Models
     - [x] Multi-Variant Linear Regression
     - [x] Logistic Regression
     - [x] Decision Tree Classifier
-    - [ ] Support Vector Machines (SVM)
-    - [ ] Recurrent Neural Network (LSTM)
 - [x] UI for Presentation | Report
 
 ---
@@ -63,7 +61,6 @@ Project Presentation UI: https://singhaaron.github.io/neural_tradeazy/
 │   └── 02_models
 │       ├── 2.0-linear_regression.ipynb
 │       ├── 2.0-logistic_regression.ipynb
-│       └── 2.0-lstm_neural_net.ipynb
 ├── requirements.txt  #<-- Necessary installation packages for python virtual environment
 └── src
     ├── d01_utils #<-- Functions used across the project
